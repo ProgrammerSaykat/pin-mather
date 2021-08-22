@@ -39,18 +39,37 @@ document.getElementById('key-pad').addEventListener('click', function(event){
     if(isNaN(number)){
         if(number == 'C'){
             calcInput.value = '';
-        }
-        
+        }       
     }
     else{
         const privouseNumber = calcInput.value;
         const newCalc = privouseNumber + number;
         calcInput.value = newCalc;
+    }    
+});
+
+
+function verifyPin(){
+    const pin = document.getElementById('display-input').value;
+    const typeNumbers = document.getElementById('type-numbers').value;
+    
+    const passNotafication = document.getElementById('verification-pass')
+    const failNotafication = document.getElementById('verification-fail')
+    
+    if (pin == typeNumbers) {
+        passNotafication.style.display = 'block'
+        failNotafication.style.display = 'none'
+        
+    }
+    else{
+        
+        failNotafication.style.display = 'block';
+        passNotafication.style.display = 'none'
     }
 
-
     
-})
+    
+}
 
 
 
