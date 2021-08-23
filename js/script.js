@@ -1,5 +1,5 @@
 // use function
-function getPin(){
+/* function getPin(){
     const pin = Math.round(Math.random()*100000);
     const pinString = pin + '';
     if(pinString.length == 5){
@@ -9,28 +9,36 @@ function getPin(){
         // console.log('got the 3 digit',  pin);
         return getPin() 
     }
-}
+} */
 
-document.getElementById('generate-pin').addEventListener('click', function(){
+// document.getElementById('generate-pin').addEventListener('click', function(){
     
-    const pin = getPin();
-    document.getElementById('display-input').value = pin;
+//     const pin = getPin();
+//     document.getElementById('display-input').value = pin;
 
-});
+// });
 
-/* Use My taktis 
+
 document.getElementById('generate-pin').addEventListener('click', function(){
-    const pin = Math.round(Math.random()*100000)
+    const pinGe = Math.random()*100000
+    console.log(pinGe);
+    const pin = Math.round(pinGe)
     const pinString = pin + '';
     if (pinString.length == 5) {
-        return pin;
-    }
-    else{
-        console.log('thsi si 4 down', pin);
+        document.getElementById('display-input').value = pin;
         return pin;
         
     }
-}); */
+    else{
+        // alert('pin is not ge') 
+        console.log('thsi si 4 down', pin);
+        // return pin;
+        
+    }
+
+    
+
+});
 
 
 document.getElementById('key-pad').addEventListener('click', function(event){
